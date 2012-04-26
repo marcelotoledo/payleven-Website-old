@@ -1,0 +1,106 @@
+/*!
+ * Project:   CORTE
+ * Date:      2012/04/26
+/* ---------------------------------------- */
+
+* { margin: 0; padding: 0; }
+
+html { overflow-y: scroll; font-size: 100.01%; }
+body { background: #fff url(../images/site-bg.jpg) 50% 0 no-repeat; font-size: 62.5%; }
+
+body, textarea, input, select, option, button { color: #555; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; line-height: 1.5; }
+li, dt, dd, p, figure, th, td, caption, pre { font-size: 1.2em; } /*---*/ li *, li p, li li, dt *, dd *, p *, figure *, th *, td * { font-size: 1em; }
+div, form, blockquote, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, ul, ol, dl, p, table, pre, h1, h2, h3, h4, h5, h6 { display: block; margin: 0 0 15px; } :last-child { margin-bottom: 0 !important; } .last-child { margin-bottom: 0 !important; }
+
+/*! layout -------- */
+
+#root { width: 940px; margin: 0 auto; }
+ #top { min-height: 130px; padding-top: 30px; }
+  #logo { margin: 0; }
+   #logo a { display: block; width: 151px; height: 60px; overflow: hidden; background: url(../images/logo-a.png) no-repeat; text-indent: 100%; white-space: nowrap; }
+  #skips, #skips ul { position: absolute; position: fixed; top: 50%; left: 0; z-index: 9999; list-style: none; width: 100%; margin: -30px 0 0; padding: 0; text-align: center; }
+   #skips li { position: absolute; left: 0; top: 0; width: 100%; font: bold 5em/1 Calibri,Myriad Pro,Arial,Helvetica Neue,Helvetica,sans-serif; }
+    #skips li a { display: -moz-inline-stack; display: inline-block; position: fixed; left: -10001px; margin: 0 auto; padding: 20px 30px; border: 1px dotted #fff; border-color: rgba(255,255,255,0.7); -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px;  background: #333; background: rgba(0,0,0,0.6); color: #fff; text-align: center; text-decoration: none; outline: none; }
+    #skips li a:focus, #skips li a:active { position: relative; left: 0; }
+ #content { padding-bottom: 50px; }
+
+/*! grids --------- */
+
+/*! elements ------ */
+
+.box-a { background: #fff; }
+ .box-a h2 { margin: 0; padding: 10px 25px; background: #1369a0; color: #fff; text-align: center; }
+ .box-a .content { padding: 20px 23px; border: 2px solid #b6b6b6; background: #fff; }
+
+.form-a { }
+ .form-a p { position: relative; zoom: 1; }
+ .form-a label { display: block; color: #4ca8e4; font-size: 18px; }
+ .form-a input[type=text] { position: relative; height: 44px; padding: 0 9px; border: 1px solid #c0c0c0; background: #f7f7f7; font-size: 18px; line-height: 44px; }
+ .form-a input[type=text] {
+	background: -moz-linear-gradient(#dfdfdf, #f7f7f7);
+	background: -webkit-linear-gradient(#dfdfdf, #f7f7f7);
+	background: -o-linear-gradient(#dfdfdf, #f7f7f7);
+	background: -ms-linear-gradient(#dfdfdf, #f7f7f7);
+	background: linear-gradient(#dfdfdf, #f7f7f7);
+	-pie-background: linear-gradient(#dfdfdf, #f7f7f7);
+	behavior: url(styles/pie.htc);
+}
+
+.story-a { width: 465px; }
+ .story-a h1 { margin-bottom: 60px; line-height: 1; }
+ .story-a ul { margin-bottom: 40px; list-style: none; padding: 0; }
+  .story-a ul li { margin: 0 0 10px; padding-left: 42px; background: url(../images/bullet-list-a.png) no-repeat; color: #4ca8e4; font-size: 2em; font-weight: bold; line-height: 34px; }
+   .story-a ul li img { margin-left: 10px; vertical-align: middle; }
+ .story-a .box-a { width: 294px; }
+  .story-a .box-a p { margin: 0 0 20px; }
+  .story-a .box-a p.error { padding-left: 45px; background: url(../images/error-a.png) 0 50% no-repeat; color: #fd4b4b; font-size: 1.2em; font-weight: bold; line-height: 1.5; text-transform: uppercase; }
+  .story-a .box-a p.correct { padding-left: 45px; background: url(../images/correct-a.png) 0 50% no-repeat; color: #259c8d; font-size: 1.2em; font-weight: bold; line-height: 1.5; text-transform: uppercase; }
+  .story-a .box-a input { width: 224px; }
+  .story-a .box-a p.action { margin: 0; text-align: center; }
+   .story-a .box-a p.action button { height: 48px; padding: 0 30px; border: none; background: #4ca8e4; color: #fff !important; font-size: 18px; text-align: center; text-decoration: none; }
+   .story-a .box-a p.action button:hover { background: #e99635; }
+
+/*! headers ------- */
+
+/*! buttons ------- */
+
+/*! helpers ------- */
+
+.offset { position: absolute !important; left: -10001px !important; overflow: hidden !important; }
+
+/*! defaults ------ */
+
+form { }
+ label { cursor: pointer; }
+ textarea { overflow: auto; resize: vertical; }
+ button { overflow: visible; padding: 0 10px; cursor: pointer; } button::-moz-focus-inner { padding: 0; border: none; }
+
+table { display: table; border-collapse: collapse; border-spacing: 0; }
+ table th, table td { padding: 5px 10px; border: 1px solid #eee; }
+
+h1, h2, h3, h4, h5, h6 { font: bold 1em/1.2 Helvetica Neue,Helvetica,Arial,sans-serif; }
+h1 { color: #1369a0; font-size: 4.8em; text-transform: uppercase; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.0em; }
+
+ul, ol, dd, blockquote { padding-left: 40px; }
+ ul ul, ol ol, ul ol, ol ul { margin-bottom: 0; }
+
+a { color: #09f; text-decoration: underline; }
+a:hover, a:focus, a:active { color: #000; text-decoration: underline; }
+ a span { cursor: pointer; }
+
+img { border-width: 0; image-rendering: optimizeQuality; -ms-interpolation-mode: bicubic; }
+
+pre { font-family: Consolas,Monaco,Courier New,monospace; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+hr, div.hr { overflow: hidden; width: 100%; height: 1px; margin: 15px 0; border: none; border-top: 1px solid #eee; background: none; font-size: 0; } div.hr * { display: none; }
+
+/*! mobile -------- */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } }
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) { body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } }
