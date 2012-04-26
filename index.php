@@ -1,7 +1,19 @@
 <?php
 
+function cleanEmail($email)
+{
+  $patterns = array();
+  $patterns[0] = '/\'/';
+  $patterns[1] = '/"/';
+  $patterns[2] = '/-/';
+  
+  return preg_replace($patterns, '', $str);
+}
+
 function addEmail($email)
 {
+  $email = cleanEmail($email);
+  
   $link = mysql_connect('zenpaywwwprod.ciboiymlb7sj.us-east-1.rds.amazonaws.com', 'root', 'rocketinfra');
   if (!$link) {
     return false;
@@ -10,7 +22,7 @@ function addEmail($email)
   if (!mysql_select_db('zenpaywww', $link)) {
     return false;
   }
-
+  
   $query = "insert into user (email) values ('$email')";
   $res = mysql_query($query, $link);
   if (!$res) {
